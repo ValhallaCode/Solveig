@@ -2,3 +2,5 @@
 *.filters
 *.user
 Code/Engine/.vs/Engine/v14/.suo
+*.vcxproj
+*.vcxproj

@@ -43,227 +43,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Audio\AudioSystem.cpp" />
-    <ClCompile Include="Core\Atomic.cpp" />
-    <ClCompile Include="Core\BlockAllocator.cpp" />
-    <ClCompile Include="Core\BuildConfig.cpp" />
-    <ClCompile Include="Core\CallStack.cpp" />
-    <ClCompile Include="Core\CommandSystem.cpp" />
-    <ClCompile Include="Core\CriticalSection.cpp" />
-    <ClCompile Include="Core\Event.cpp" />
-    <ClCompile Include="Core\Interval.cpp" />
-    <ClCompile Include="Core\Job.cpp" />
-    <ClCompile Include="Core\Logging.cpp" />
-    <ClCompile Include="Core\Profiler.cpp" />
-    <ClCompile Include="Core\Profiling.cpp" />
-    <ClCompile Include="Core\Signal.cpp" />
-    <ClCompile Include="Core\XMLUtils.cpp" />
-    <ClCompile Include="Input\BinaryStrem.cpp" />
-    <ClCompile Include="Input\FileStream.cpp" />
-    <ClCompile Include="Math\MatrixStack.cpp" />
-    <ClCompile Include="Math\Quaternion.cpp" />
-    <ClCompile Include="Math\UintVector3.cpp" />
-    <ClCompile Include="Math\UintVector4.cpp" />
-    <ClCompile Include="Network\LoopBackConnection.cpp" />
-    <ClCompile Include="Network\Net.cpp" />
-    <ClCompile Include="Network\NetAddress.cpp" />
-    <ClCompile Include="Network\NetConnection.cpp" />
-    <ClCompile Include="Network\NetMessage.cpp" />
-    <ClCompile Include="Network\NetMessageDefinition.cpp" />
-    <ClCompile Include="Network\NetObject.cpp" />
-    <ClCompile Include="Network\NetSession.cpp" />
-    <ClCompile Include="Network\RemoteCommandService.cpp" />
-    <ClCompile Include="Network\TCPConnection.cpp" />
-    <ClCompile Include="Network\TCPSession.cpp" />
-    <ClCompile Include="Network\TCPSocket.cpp" />
-    <ClCompile Include="Render\Animator3D.cpp" />
-    <ClCompile Include="Render\KerningFont.cpp" />
-    <ClCompile Include="Render\MeshBuilder.cpp" />
-    <ClCompile Include="Render\Motion.cpp" />
-    <ClCompile Include="Render\ParticleSystem.cpp" />
-    <ClCompile Include="Render\Pose.cpp" />
-    <ClCompile Include="Render\Skeleton.cpp" />
-    <ClCompile Include="Render\Sprite.cpp" />
-    <ClCompile Include="RHI\BlendState.cpp" />
-    <ClCompile Include="RHI\Blob.cpp" />
-    <ClCompile Include="RHI\ComputeJob.cpp" />
-    <ClCompile Include="RHI\ComputeShader.cpp" />
-    <ClCompile Include="RHI\ConstantBuffer.cpp" />
-    <ClCompile Include="Core\ErrorWarningAssert.cpp" />
-    <ClCompile Include="Core\StringUtils.cpp" />
-    <ClCompile Include="Core\Time.cpp" />
-    <ClCompile Include="EngineConfig.cpp" />
-    <ClCompile Include="RHI\DepthStencilState.cpp" />
-    <ClCompile Include="RHI\GeometryShader.cpp" />
-    <ClCompile Include="RHI\Image.cpp" />
-    <ClCompile Include="Input\FileUtilities.cpp" />
-    <ClCompile Include="Input\Input.cpp" />
-    <ClCompile Include="Input\XboxController.cpp" />
-    <ClCompile Include="Math\AABB2D.cpp" />
-    <ClCompile Include="Math\AABB3D.cpp" />
-    <ClCompile Include="Math\Disc2D.cpp" />
-    <ClCompile Include="Math\IntVector2.cpp" />
-    <ClCompile Include="Math\IntVector3.cpp" />
-    <ClCompile Include="Math\LineSegment2D.cpp" />
-    <ClCompile Include="Math\LineSegment3D.cpp" />
-    <ClCompile Include="Math\Math2D.cpp" />
-    <ClCompile Include="Math\Math3D.cpp" />
-    <ClCompile Include="Math\MathUtils.cpp" />
-    <ClCompile Include="Math\Matrix4.cpp" />
-    <ClCompile Include="Math\Noise.cpp" />
-    <ClCompile Include="Math\OBB2D.cpp" />
-    <ClCompile Include="Math\Plane3D.cpp" />
-    <ClCompile Include="Math\Sphere3D.cpp" />
-    <ClCompile Include="Math\Vector2.cpp" />
-    <ClCompile Include="Math\Vector3.cpp" />
-    <ClCompile Include="Math\Vector4.cpp" />
-    <ClCompile Include="Render\BitmapFont.cpp" />
-    <ClCompile Include="Render\Renderer.cpp" />
-    <ClCompile Include="Render\Rgba.cpp" />
-    <ClCompile Include="Render\SimpleRenderer.cpp" />
-    <ClCompile Include="Render\SpriteAnimation.cpp" />
-    <ClCompile Include="Render\SpriteSheet.cpp" />
-    <ClCompile Include="Render\Texture.cpp" />
-    <ClCompile Include="RHI\DX11.cpp" />
-    <ClCompile Include="RHI\IndexBuffer.cpp" />
-    <ClCompile Include="RHI\Material.cpp" />
-    <ClCompile Include="RHI\Mesh.cpp" />
-    <ClCompile Include="RHI\RasterState.cpp" />
-    <ClCompile Include="RHI\RenderMesh.cpp" />
-    <ClCompile Include="RHI\RHIDevice.cpp" />
-    <ClCompile Include="RHI\RHIDeviceContext.cpp" />
-    <ClCompile Include="RHI\RHIInstance.cpp" />
-    <ClCompile Include="RHI\RHIOutput.cpp" />
-    <ClCompile Include="RHI\Sampler.cpp" />
-    <ClCompile Include="RHI\Shader.cpp" />
-    <ClCompile Include="RHI\ShaderProgram.cpp" />
-    <ClCompile Include="RHI\StructuredBuffer.cpp" />
-    <ClCompile Include="RHI\TessellationShader.cpp" />
-    <ClCompile Include="RHI\Texture1D.cpp" />
-    <ClCompile Include="RHI\Texture2D.cpp" />
-    <ClCompile Include="RHI\TextureCube.cpp" />
-    <ClCompile Include="RHI\TextureDX.cpp" />
-    <ClCompile Include="RHI\VertexBuffer.cpp" />
-    <ClCompile Include="UI\UICanvas.cpp" />
-    <ClCompile Include="UI\UIEditableText.cpp" />
-    <ClCompile Include="UI\UIElement.cpp" />
-    <ClCompile Include="UI\UIPanel.cpp" />
-    <ClCompile Include="UI\UISprite.cpp" />
-    <ClCompile Include="UI\UIText.cpp" />
+    <ClCompile Include="Memory\AllocationTracker.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Audio\AudioSystem.hpp" />
-    <ClInclude Include="Core\Atomic.hpp" />
-    <ClInclude Include="Core\BlockAllocator.hpp" />
-    <ClInclude Include="Core\BuildConfig.hpp" />
-    <ClInclude Include="Core\CallStack.hpp" />
-    <ClInclude Include="Core\CommandSystem.hpp" />
-    <ClInclude Include="Core\CriticalSection.hpp" />
-    <ClInclude Include="Core\Event.hpp" />
-    <ClInclude Include="Core\Interval.hpp" />
-    <ClInclude Include="Core\Job.hpp" />
-    <ClInclude Include="Core\Logging.hpp" />
-    <ClInclude Include="Core\Profiler.hpp" />
-    <ClInclude Include="Core\Profiling.hpp" />
-    <ClInclude Include="Core\Signal.hpp" />
-    <ClInclude Include="Core\ThreadSafeQueue.hpp" />
-    <ClInclude Include="Core\XMLUtils.hpp" />
-    <ClInclude Include="Input\BinaryStream.hpp" />
-    <ClInclude Include="Input\FileStream.hpp" />
-    <ClInclude Include="Math\MatrixStack.hpp" />
-    <ClInclude Include="Math\Quaternion.hpp" />
-    <ClInclude Include="Math\UintVector3.hpp" />
-    <ClInclude Include="Math\UintVector4.hpp" />
-    <ClInclude Include="Network\LoopBackConnection.hpp" />
-    <ClInclude Include="Network\Net.hpp" />
-    <ClInclude Include="Network\NetAddress.hpp" />
-    <ClInclude Include="Network\NetConnection.hpp" />
-    <ClInclude Include="Network\NetDefinition.hpp" />
-    <ClInclude Include="Network\NetMessage.hpp" />
-    <ClInclude Include="Network\NetMessageDefinition.hpp" />
-    <ClInclude Include="Network\NetObject.hpp" />
-    <ClInclude Include="Network\NetSession.hpp" />
-    <ClInclude Include="Network\RemoteCommandService.hpp" />
-    <ClInclude Include="Network\TCPConnection.hpp" />
-    <ClInclude Include="Network\TCPSession.hpp" />
-    <ClInclude Include="Network\TCPSocket.hpp" />
-    <ClInclude Include="Render\Animator3D.hpp" />
-    <ClInclude Include="Render\KerningFont.hpp" />
-    <ClInclude Include="Render\MeshBuilder.hpp" />
-    <ClInclude Include="Render\Motion.hpp" />
-    <ClInclude Include="Render\ParticleSystem.hpp" />
-    <ClInclude Include="Render\Pose.hpp" />
-    <ClInclude Include="Render\Skeleton.hpp" />
-    <ClInclude Include="Render\Sprite.hpp" />
-    <ClInclude Include="RHI\BlendState.hpp" />
-    <ClInclude Include="RHI\Blob.hpp" />
-    <ClInclude Include="RHI\ComputeJob.hpp" />
-    <ClInclude Include="RHI\ComputeShader.hpp" />
-    <ClInclude Include="RHI\ConstantBuffer.hpp" />
-    <ClInclude Include="Core\ErrorWarningAssert.hpp" />
-    <ClInclude Include="Core\StringUtils.hpp" />
-    <ClInclude Include="Core\Time.hpp" />
-    <ClInclude Include="EngineConfig.hpp" />
-    <ClInclude Include="RHI\DepthStencilState.hpp" />
-    <ClInclude Include="RHI\GeometryShader.hpp" />
-    <ClInclude Include="RHI\Image.hpp" />
-    <ClInclude Include="Input\FileUtilities.hpp" />
-    <ClInclude Include="Input\Input.hpp" />
-    <ClInclude Include="Input\XboxController.hpp" />
-    <ClInclude Include="Math\AABB2D.hpp" />
-    <ClInclude Include="Math\AABB3D.hpp" />
-    <ClInclude Include="Math\Disc2D.hpp" />
-    <ClInclude Include="Math\IntVector2.hpp" />
-    <ClInclude Include="Math\IntVector3.hpp" />
-    <ClInclude Include="Math\LineSegment2D.hpp" />
-    <ClInclude Include="Math\LineSegment3D.hpp" />
-    <ClInclude Include="Math\Math2D.hpp" />
-    <ClInclude Include="Math\Math3D.hpp" />
-    <ClInclude Include="Math\MathUtils.hpp" />
-    <ClInclude Include="Math\Matrix4.hpp" />
-    <ClInclude Include="Math\Noise.hpp" />
-    <ClInclude Include="Math\OBB2D.hpp" />
-    <ClInclude Include="Math\Plane3D.hpp" />
-    <ClInclude Include="Math\Sphere3D.hpp" />
-    <ClInclude Include="Math\Vector2.hpp" />
-    <ClInclude Include="Math\Vector3.hpp" />
-    <ClInclude Include="Math\Vector4.hpp" />
-    <ClInclude Include="Render\BitmapFont.hpp" />
-    <ClInclude Include="Render\Renderer.hpp" />
-    <ClInclude Include="Render\Rgba.hpp" />
-    <ClInclude Include="Render\SimpleRenderer.hpp" />
-    <ClInclude Include="Render\SpriteAnimation.hpp" />
-    <ClInclude Include="Render\SpriteSheet.hpp" />
-    <ClInclude Include="Render\Texture.hpp" />
-    <ClInclude Include="Render\Vertex.hpp" />
-    <ClInclude Include="RHI\DX11.hpp" />
-    <ClInclude Include="RHI\IndexBuffer.hpp" />
-    <ClInclude Include="RHI\Material.hpp" />
-    <ClInclude Include="RHI\Mesh.hpp" />
-    <ClInclude Include="RHI\RasterState.hpp" />
-    <ClInclude Include="RHI\RenderMesh.hpp" />
-    <ClInclude Include="RHI\RHI.hpp" />
-    <ClInclude Include="RHI\RHIDevice.hpp" />
-    <ClInclude Include="RHI\RHIDeviceContext.hpp" />
-    <ClInclude Include="RHI\RHIInstance.hpp" />
-    <ClInclude Include="RHI\RHIOutput.hpp" />
-    <ClInclude Include="RHI\RHITypes.hpp" />
-    <ClInclude Include="RHI\Sampler.hpp" />
-    <ClInclude Include="RHI\Shader.hpp" />
-    <ClInclude Include="RHI\ShaderProgram.hpp" />
-    <ClInclude Include="RHI\StructuredBuffer.hpp" />
-    <ClInclude Include="RHI\TessellationShader.hpp" />
-    <ClInclude Include="RHI\Texture1D.hpp" />
-    <ClInclude Include="RHI\Texture2D.hpp" />
-    <ClInclude Include="RHI\TextureCube.hpp" />
-    <ClInclude Include="RHI\TextureDX.hpp" />
-    <ClInclude Include="RHI\VertexBuffer.hpp" />
-    <ClInclude Include="UI\UICanvas.hpp" />
-    <ClInclude Include="UI\UIEditableText.hpp" />
-    <ClInclude Include="UI\UIElement.hpp" />
-    <ClInclude Include="UI\UIPanel.hpp" />
-    <ClInclude Include="UI\UISprite.hpp" />
-    <ClInclude Include="UI\UIText.hpp" />
+    <ClInclude Include="Memory\AllocationTracker.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1E17C7B3-3C29-42D7-AA27-115D6DCB2763}</ProjectGuid>
@@ -426,7 +209,7 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
@@ -434,7 +217,7 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;</AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -495,7 +278,7 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD;FINAL_BUILD</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
@@ -503,7 +286,7 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugInline|x64'">
@@ -555,7 +338,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -564,7 +347,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -603,7 +386,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD;FINAL_BUILD</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -612,7 +395,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Engine/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|x64'">
