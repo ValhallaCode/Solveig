@@ -13,6 +13,14 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Final Build|Win32">
+      <Configuration>Final Build</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final Build|x64">
+      <Configuration>Final Build</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -43,10 +51,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EngineConfig.cpp" />
+    <ClCompile Include="IO\Callstack.cpp" />
     <ClCompile Include="Memory\AllocationTracker.cpp" />
+    <ClCompile Include="Time\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EngineConfig.hpp" />
+    <ClInclude Include="IO\Callstack.hpp" />
     <ClInclude Include="Memory\AllocationTracker.hpp" />
+    <ClInclude Include="Time\Utils.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1E17C7B3-3C29-42D7-AA27-115D6DCB2763}</ProjectGuid>
@@ -74,6 +88,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
@@ -112,6 +133,13 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -136,6 +164,9 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -149,6 +180,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|x64'" Label="PropertySheets">
@@ -174,6 +208,10 @@
     <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|Win32'">
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|Win32'">
     <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
@@ -195,6 +233,10 @@
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;$(FBXSDK_DIR)lib\vs2015\$(PlatformShortName)\debug</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|x64'">
     <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -353,6 +395,30 @@
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FINAL_BUILD;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Tool Release|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
@@ -386,6 +452,27 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD;FINAL_BUILD</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final Build|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>FINAL_BUILD;NDEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD;FINAL_BUILD</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
