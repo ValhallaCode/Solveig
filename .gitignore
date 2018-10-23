@@ -4,3 +4,12 @@
 Code/Engine/.vs/Engine/v14/.suo
 *.vcxproj
 *.vcxproj
+*.obj
+*.tlog
+*.lib
+*.idb
+*.log
+*.pdb
+*.ipch
+*.db
+Code/Engine/.vs/Engine/v15/.suo

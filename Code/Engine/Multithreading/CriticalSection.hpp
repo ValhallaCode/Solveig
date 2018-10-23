@@ -74,7 +74,7 @@ void ForwardArgumentsThread(void *ptr)
 }
 
 template <typename CB, typename ...ARGS>
-thread_handle ThreadCreate(wchar_t* thread_name, CB entry_point, ARGS ...args)
+thread_handle GetThread(wchar_t* thread_name, CB entry_point, ARGS ...args)
 {
 	pass_data<CB, ARGS...> *pass = new pass_data<CB, ARGS...>(entry_point, args...);
 	return ThreadCreate(ForwardArgumentsThread<CB, ARGS...>, (void*)pass, thread_name);

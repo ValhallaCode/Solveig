@@ -1,5 +1,5 @@
-#include "IO/CallStack.hpp"
-#include "Time/Utils.hpp"
+#include "Engine/IO/CallStack.hpp"
+#include "Engine/Time/Utils.hpp"
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 #include <stdlib.h>
@@ -99,7 +99,7 @@ CallStack* CreateCallstack(uint8_t skip_frames)
 	// max_frames to return
 	// memory to put this information into.
 	// out pointer to back trace hash.
-	uint8_t frames = CaptureStackBackTrace(1 + skip_frames, MAX_DEPTH, stack, &hash);
+	uint8_t frames = (uint8_t)CaptureStackBackTrace(1 + skip_frames, MAX_DEPTH, stack, &hash);
 
 	// create the callstack using an untracked allocation
 	CallStack *cs = (CallStack*) ::calloc(1, sizeof(CallStack));

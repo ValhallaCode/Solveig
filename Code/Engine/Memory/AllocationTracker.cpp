@@ -1,6 +1,6 @@
-#include "Memory\AllocationTracker.hpp"
-#include "IO\Callstack.hpp"
-#include "Time\Utils.hpp"
+#include "Engine\Memory\AllocationTracker.hpp"
+#include "Engine\IO\Callstack.hpp"
+#include "Engine\Time\Utils.hpp"
 #include <stdlib.h>
 #include <string>
 // #TODO Remove std::string
@@ -383,7 +383,7 @@ void* operator new(const size_t size)
 {
 	++g_alloc_count;
 	++g_frame_allocs;
-	g_allocated_byte_count += size;
+	g_allocated_byte_count += (uint32_t)size;
 
 	#if (g_allocated_byte_count > g_max_allocated_byte_count && DETECT_MEMORY_OVERRUN > g_allocated_byte_count)
 		#define DETECT_MEMORY_OVERRUN g_allocated_byte_count - g_max_allocated_byte_count;

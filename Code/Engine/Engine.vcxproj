@@ -51,13 +51,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Multithreading\CriticalSection.cpp" />
     <ClCompile Include="EngineConfig.cpp" />
     <ClCompile Include="IO\Callstack.cpp" />
     <ClCompile Include="Memory\AllocationTracker.cpp" />
+    <ClCompile Include="Multithreading\CriticalSection.cpp" />
     <ClCompile Include="Time\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Container\Queue.hpp" />
     <ClInclude Include="Multithreading\CriticalSection.hpp" />
     <ClInclude Include="EngineConfig.hpp" />
     <ClInclude Include="IO\Callstack.hpp" />
@@ -253,7 +254,7 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/;$(ProjectDir)../;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
@@ -261,7 +262,8 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -322,7 +324,7 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);FINAL_BUILD;FINAL_BUILD</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;$(ProjectDir)/;$(ProjectDir)../Thirdparty/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/;$(ProjectDir)../;</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
@@ -330,7 +332,8 @@
       <SubSystem>Windows</SubSystem>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)../../Solveig/Code/;$(SolutionDir)Code/;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugInline|x64'">
