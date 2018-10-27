@@ -25,10 +25,7 @@ public:
 
 	inline U32 GetAllocationCount() { return m_allocCount; };
 	inline U64 GetFreeAllocation() { return m_blockSize - ((U64)m_allocCount * (U64)Max(sizeof(Object), sizeof(Block))); };
-
-	#ifdef _DEBUG
-		inline void* GetBuffer() { return m_memory; };
-	#endif
+	inline void* GetBuffer() { return m_memory; };
 
 protected:
 	void* Allocate()
