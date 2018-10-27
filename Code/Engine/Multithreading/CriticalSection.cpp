@@ -1,4 +1,4 @@
-#include "Engine/Multithreading/CriticalSection.hpp"
+#include "Multithreading/CriticalSection.hpp"
 
 //////////////////////////////////////////////////////
 //													//
@@ -62,7 +62,7 @@ static DWORD WINAPI ThreadEntryPointCommon(void* arg)
 }
 
 // Creates a thread with the entry point of cb, passed data
-thread_handle ThreadCreate(thread_cb cb, void* data, wchar_t* thread_name)
+thread_handle ThreadCreate(thread_cb cb, void* data, const wchar_t* thread_name)
 {
 	// handle is like pointer, or reference to a thread
 	// thread_id is unique identifier
