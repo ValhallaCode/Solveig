@@ -5,14 +5,14 @@
 class BaseAllocator
 {
 protected:
-	virtual void* Allocate() = 0;
-	virtual void Free(void* pointer) = 0;
+	virtual void* Allocate(U64 size) = 0;
+	virtual void Free(void* pointer, U64 size) = 0;
 
 public:
 	template <typename Object, typename ...ARGS>
 	Object* Create(ARGS ...args)
 	{
-		void* pointer = Allocate();
+		void* pointer = Allocate((U64)sizeof(Object));
 		return new (pointer) Object(args...);
 	}
 
@@ -20,6 +20,6 @@ public:
 	void Destroy(Object* obj)
 	{
 		obj->~Object();
-		Free(obj);
+		Free(obj, (U64)sizeof(Object));
 	}
 };
