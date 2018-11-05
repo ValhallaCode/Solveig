@@ -1,5 +1,5 @@
 #pragma once
-#include "Engine/Multithreading/CriticalSection.hpp"
+#include "Multithreading/CriticalSection.hpp"
 #include <cstdint>
 
 template <typename Object>

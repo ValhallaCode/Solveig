@@ -16,7 +16,7 @@ template<typename SmallestBlock>
 class BuddyAllocator : public BaseAllocator
 {
 private:
-	BuddyAllocator(U64 obj_count)
+	explicit BuddyAllocator(U64 obj_count)
 		:m_allocCount(0)
 	{
 		obj_count = UpperPowerOfTwo(obj_count);

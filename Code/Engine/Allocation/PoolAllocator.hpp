@@ -16,7 +16,7 @@ template<typename Block>
 class PoolAllocator : public BaseAllocator
 {
 public:
-	PoolAllocator(U64 obj_count)
+	explicit PoolAllocator(U64 obj_count)
 		: m_freeList(nullptr)
 		, m_memory(nullptr)
 		, m_allocCount(0)

@@ -13,6 +13,18 @@ inline Number Max(const Number& a, const Number& b, ARGS ...args)
 	return Max(a, Max(b, args...));
 }
 
+template <typename Number>
+inline Number Min(const Number& a, const Number& b)
+{
+	return (a < b) ? a : b;
+}
+
+template <typename Number, typename ...ARGS>
+inline Number Min(const Number& a, const Number& b, ARGS ...args)
+{
+	return Min(a, Min(b, args...));
+}
+
 template<typename Int>
 Int UpperPowerOfTwo(const Int& num)
 {

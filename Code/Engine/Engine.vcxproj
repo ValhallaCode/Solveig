@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Allocation\BaseAllocator.hpp" />
+    <ClInclude Include="Allocation\BuddyAllocator.hpp" />
     <ClInclude Include="Allocation\PoolAllocator.hpp" />
+    <ClInclude Include="Container\RingBuffer.hpp" />
     <ClInclude Include="Container\Queue.hpp" />
     <ClInclude Include="Core\NumberDef.hpp" />
     <ClInclude Include="Math\Utils.hpp" />
